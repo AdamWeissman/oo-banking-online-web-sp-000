@@ -13,6 +13,12 @@ class Transfer
   end
   
   def execute_transaction
-    valid? ? (sender.balance -= amount; receiver.balance += amount) : puts "sorry"
+    if valid? 
+      sender.balance -= amount
+      receiver.balance += amount
+    else
+      nil
+    end
+  end
 end
   
