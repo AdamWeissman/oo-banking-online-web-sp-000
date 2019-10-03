@@ -1,11 +1,9 @@
 class BankAccount
-
-  @name
-  @balance
-  @display_balance
-  @deposit
-  @status
-  @close_account
+  attr_reader :name
+  
+  def_initialize(name)
+    @name = name
+  end
 
 
 
