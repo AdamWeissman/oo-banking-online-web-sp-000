@@ -1,11 +1,11 @@
 class Transfer
-  let(:avi) { BankAccount.new("Avi") }
-  let(:amanda) { BankAccount.new("Amanda") }
-  let(:terrance) { BankAccount.new("Terrance") }
-  let(:transfer) { Transfer.new(amanda, avi, 50) }
-  let(:bad_transfer) { Transfer.new(amanda, avi, 4000) }
-
-  describe 'initialize' do
+  
+    def initialize(sender, receiver, transfer)
+      @sender = sender
+      @receiver = receiver
+      @transfer = transfer
+    end
+      
     it "can initialize a Transfer" do
       expect(transfer).to be_a(Transfer)
     end
