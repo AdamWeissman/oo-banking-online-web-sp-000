@@ -13,13 +13,13 @@ class Transfer
   end
   
   def execute_transaction
-    if valid? 
+    unless @status == "complete"
+      break
+    elsif valid? 
       sender.balance -= amount
       receiver.balance += amount
       @status = "complete"
       return status
-    else
-      nil
     end
   end
 
