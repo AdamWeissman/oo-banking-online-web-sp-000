@@ -14,7 +14,7 @@ class BankAccount
   end
   
   #def self.display_balance
-  #  print ("Your balance is #{balance}")
+  #  print ("Your balance is #{balance}.")
   #end
   
   
