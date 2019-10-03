@@ -17,7 +17,7 @@ class Transfer
       sender.balance -= amount
       receiver.balance += amount
       status = "complete"
-      puts status
+      return status
     else
       nil
     end
