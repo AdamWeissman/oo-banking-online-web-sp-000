@@ -5,10 +5,4 @@ class BankAccount
     @name = name
   end
 
-
-
-
-
-
-
 end
