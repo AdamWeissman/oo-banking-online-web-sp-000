@@ -13,15 +13,10 @@ class Transfer
   end
   
   def execute_transaction
-    status = "complete"
-    return status
-  end
-    
-=begin
     if valid? 
       sender.balance -= amount
       receiver.balance += amount
-      status = "complete"
+      @status = "complete"
       return status
     else
       nil
