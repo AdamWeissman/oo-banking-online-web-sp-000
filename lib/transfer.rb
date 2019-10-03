@@ -13,13 +13,17 @@ class Transfer
   end
   
   def execute_transaction
-    if valid? && @status == "pending"
-      sender.balance -= amount
-      receiver.balance += amount
-      @status = "complete"
-      return status
+    if amount > sender.balance
+      puts "does not have a valid account"
     else
-      nil
+      if valid? && @status == "pending"
+        sender.balance -= amount
+        receiver.balance += amount
+        @status = "complete"
+        return status
+      else
+        nil
+      end
     end
   end
 
